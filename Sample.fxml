@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" minHeight="400.0" minWidth="600.0" prefHeight="723.0" prefWidth="864.0" xmlns:fx="http://javafx.com/fxml" fx:controller="javafxapplication1.SampleController">
+  <children>
+    <VBox minHeight="600.0" minWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <MenuBar>
+          <menus>
+            <Menu mnemonicParsing="false" text="File">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleOpenButtonAction" text="Open..." />
+                <MenuItem mnemonicParsing="false" text="Close" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Delete" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+              <items>
+                <MenuItem mnemonicParsing="false" text="About" />
+              </items>
+            </Menu>
+          </menus>
+        </MenuBar>
+        <ToolBar>
+          <items>
+            <Button fx:id="openButton" mnemonicParsing="false" onAction="#handleOpenButtonAction" text="Open..." />
+          </items>
+        </ToolBar>
+        <SplitPane id="SplitPane" fx:id="splitPane" dividerPositions="0.32830626450116007" minWidth="250.0" prefWidth="300.0" VBox.vgrow="ALWAYS">
+          <items>
+            <VBox prefHeight="448.0" prefWidth="180.0">
+              <children>
+                <TabPane fx:id="tPane" prefHeight="422.0" prefWidth="214.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+                  <tabs>
+                    <Tab text="Коллекция">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <children>
+                            <TreeView fx:id="tviewCollection" prefHeight="391.0" prefWidth="214.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </Tab>
+                    <Tab text="Исполнители">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <children>
+                            <TreeView id="tview" fx:id="tviewArtist" prefHeight="391.0" prefWidth="214.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </Tab>
+                    <Tab text="Альбомы">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <children>
+                            <TreeView fx:id="tviewAlbums" prefHeight="391.0" prefWidth="214.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </Tab>
+                  </tabs>
+                </TabPane>
+              </children>
+            </VBox>
+            <HBox prefHeight="422.0" prefWidth="515.0">
+              <children>
+                <TabPane fx:id="tPane" prefHeight="448.0" prefWidth="397.0001220703125" tabClosingPolicy="UNAVAILABLE" HBox.hgrow="SOMETIMES">
+                  <tabs>
+                    <Tab text="Untitled Tab">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <children>
+                            <BorderPane prefHeight="788.0" prefWidth="576.0000999999975" style="-fx-border-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <center>
+                                <VBox prefHeight="755.0" prefWidth="356.0" style="-fx-border-color: black;">
+                                  <children>
+                                    <ScrollPane id="ScrollPane" fitToWidth="true" hbarPolicy="NEVER" pannable="true" prefViewportHeight="585.0" prefViewportWidth="348.0" vbarPolicy="AS_NEEDED" VBox.vgrow="ALWAYS">
+                                      <content>
+                                        <VBox alignment="TOP_CENTER" prefHeight="585.0" prefWidth="353.0">
+                                          <children>
+                                            <Label text="Label">
+                                              <font>
+                                                <Font name="System Bold" size="16.0" />
+                                              </font>
+                                            </Label>
+                                            <TextArea editable="true" maxHeight="-1.0" maxWidth="-1.0" prefColumnCount="1" prefHeight="278.0" prefWidth="352.0" promptText="NONE" text="Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet, consectetur, adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?&#10;[33] At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat…" visible="true" wrapText="true" />
+                                            <Separator prefWidth="200.0" />
+                                          </children>
+                                        </VBox>
+                                      </content>
+                                    </ScrollPane>
+                                  </children>
+                                </VBox>
+                              </center>
+                              <left>
+                                <VBox alignment="TOP_CENTER" minWidth="218.0" prefHeight="755.0" prefWidth="218.0" style="&#10;-fx-background-color: lightgrey;">
+                                  <children>
+                                    <VBox id="VBox" alignment="CENTER" scaleX="1.0" spacing="5.0" style="-fx-background-radius: 30;&#10;">
+                                      <children>
+                                        <ImageView id="cover_421612842012_r.jpg" blendMode="SRC_OVER" cache="false" disable="false" fitHeight="193.59999084472656" fitWidth="220.0" focusTraversable="false" mouseTransparent="false" preserveRatio="true" smooth="true" style="" visible="true">
+                                          <effect>
+                                            <InnerShadow choke="0.15079365079365084" height="42.45535714285715" radius="21.43526785714286" width="45.28571428571429" />
+                                          </effect>
+                                          <image>
+                                            <Image url="@../../../Desktop/covs/cover_3554122642012_r.jpg" preserveRatio="true" smooth="true" />
+                                          </image>
+                                          <VBox.margin>
+                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" fx:id="x2" />
+                                          </VBox.margin>
+                                        </ImageView>
+                                        <ToggleButton id="" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-insets:45, 45;   &#10;&#10;" text="sdf">
+                                          <stylesheets>
+                                            <URL value="@css/favButton.css" />
+                                          </stylesheets>
+                                        </ToggleButton>
+                                      </children>
+                                    </VBox>
+                                    <VBox alignment="TOP_LEFT" prefHeight="128.0" prefWidth="220.0" VBox.margin="$x2">
+                                      <children>
+                                        <Label text="Genres">
+                                          <font>
+                                            <Font name="System Bold" size="14.0" />
+                                          </font>
+                                          <VBox.margin>
+                                            <Insets fx:id="x1" />
+                                          </VBox.margin>
+                                        </Label>
+                                        <VBox id="VBox" alignment="TOP_LEFT" spacing="5.0">
+                                          <children>
+                                            <Label text="Progressive Rock" VBox.margin="$x1" />
+                                            <Label text="Psychedelic Rock" VBox.margin="$x1" />
+                                            <Label text="Experimental" VBox.margin="$x1" />
+                                            <Label text="Krautrock" VBox.margin="$x1" />
+                                          </children>
+                                          <VBox.margin>
+                                            <Insets left="15.0" top="5.0" />
+                                          </VBox.margin>
+                                        </VBox>
+                                      </children>
+                                      <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" fx:id="x2" />
+                                      </padding>
+                                    </VBox>
+                                  </children>
+                                </VBox>
+                              </left>
+                              <top>
+                                <HBox alignment="CENTER" fillHeight="true" opacity="1.0" prefHeight="40.0" prefWidth="494.0" spacing="0.0" style="-fx-background-color: lightgrey;" BorderPane.alignment="CENTER_LEFT" BorderPane.margin="$x1">
+                                  <children>
+                                    <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" graphicTextGap="4.0" labelFor="$openButton" prefHeight="30.0" prefWidth="276.0" rotate="0.0" style="" text="Sunburned Hand of the Man" textAlignment="LEFT" textFill="BLACK" textOverrun="ELLIPSIS" underline="false" wrapText="false" HBox.hgrow="ALWAYS">
+                                      <font>
+                                        <Font name="Verdana" size="18.0" />
+                                      </font>
+                                    </Label>
+                                    <Region maxWidth="1.7976931348623157E308" prefHeight="1.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                                    <Button contentDisplay="LEFT" disable="false" focusTraversable="true" maxWidth="-1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="✪" textOverrun="CLIP" visible="true" HBox.hgrow="ALWAYS" HBox.margin="$x1" />
+                                  </children>
+                                  <padding>
+                                    <Insets right="5.0" />
+                                  </padding>
+                                </HBox>
+                              </top>
+                            </BorderPane>
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </Tab>
+                  </tabs>
+                </TabPane>
+              </children>
+            </HBox>
+          </items>
+        </SplitPane>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>

@@ -1,0 +1,12 @@
+CREATE TABLE artists (id INT PRIMARY KEY, name VARCHAR(50), country VARCHAR(15));
+CREATE TABLE albums (id INT PRIMARY KEY, name VARCHAR(50), length TIME);
+
+INSERT INTO artists VALUES (1, 'Jimi Hendrix', 'USA');
+INSERT INTO artists VALUES (2, 'Syd Barrett', 'UK');
+INSERT INTO artists VALUES (3, 'Rory Gallagher', 'Ireland');
+
+INSERT INTO albums VALUES (1, 'Are you experienced', '00:44:32');
+INSERT INTO albums VALUES (2, 'Bold as love', '00:33:17');
+INSERT INTO albums VALUES (3, 'Octopus', '00:39:21');
+SELECT artists.name, albums.name FROM artists, albums WHERE artists.name
+LIKE 'Jimi%';

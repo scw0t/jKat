@@ -1,0 +1,9 @@
+.toggle-button {
+  -fx-background-image: url('dislike.png');
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: center;
+}
+
+.toggle-button:selected {
+  -fx-background-image: url('C:\Users\pallkin_ad\Documents\NetBeansProjects\JavaFXApplication1\like.png');
+}
